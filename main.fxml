@@ -1,8 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<VBox xmlns="http://javafx.com/javafx"
+<VBox spacing="10" xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.mycompany.studentmanagementsystem.Controller">
+
+    <TextField fx:id="txtName" promptText="Name"/>
+    <TextField fx:id="txtCourse" promptText="Course"/>
+    <ChoiceBox fx:id="cbYear"/>
+
+    <HBox spacing="10">
+        <Button text="Add" onAction="#addStudent"/>
+        <Button text="Update" onAction="#updateStudent"/>
+        <Button text="Delete" onAction="#deleteStudent"/>
+        <Button text="Clear" onAction="#clearFields"/>
+    </HBox>
+
+    <TableView fx:id="table">
+        <columns>
+            <TableColumn fx:id="colId" text="ID"/>
+            <TableColumn fx:id="colName" text="Name"/>
+            <TableColumn fx:id="colCourse" text="Course"/>
+            <TableColumn fx:id="colYear" text="Year Level"/>
+        </columns>
+    </TableView>
+
 </VBox>
